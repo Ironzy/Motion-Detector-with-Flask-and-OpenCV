@@ -1,0 +1,11 @@
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <h3 class="mt-5">Live Streaming</h3>
+            <a href="{{ url_for('detect.detect') }}">Start Motion Detection</a><br/> <a target="_blank" href="{{ url_for('access_log.access_log') }}">View Log</a><br/><br/>
+            <img src="{{ url_for('live_stream.live_stream') }}" width="100%">
+        </div>
+    </div>
+</div>
+</body>

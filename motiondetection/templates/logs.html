@@ -1,0 +1,30 @@
+<!doctype html>
+  <head>
+    <title>{% block title %}{% endblock %} - Motion Detector - Server Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div>
+      <h3>Logged Access to Server Room</h3>
+    </div>
+    <div>
+      <table>
+        <thead>
+          <th>#</th>
+          <th>Date Added</th>
+          <th>View Image</th>
+        </thead>
+        <tbody>
+      {% for logs in logs %}
+        <tr>
+            <td>{{ logs['id'] }}</td>
+            <!--td>{{ logs['image_url'] }}</td-->
+            <td>{{ logs['created'] }}</td>
+            <td><img src="{{ path }}/{{ logs['image_url'] }}"></td>
+          </tr>
+      {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
